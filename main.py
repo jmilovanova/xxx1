@@ -4,7 +4,7 @@ from bot import *
 button_list = ["Случайная цитата", "Неофициальное API IMDB", 'Игра']
 @bot.message_handler(commands=['start'])
 def start_menu(message):
-    bot.send_message(message.from_user.id, "first_text", reply_markup=keyboard(button_list))
+    bot.send_message(message.from_user.id, "Привет! Я тестовый бот для курса программирования на языке ПаЙтон", reply_markup=keyboard(button_list))
     users.update({message.from_user.id:{}})
 
 @bot.callback_query_handler(func=lambda call: True)
